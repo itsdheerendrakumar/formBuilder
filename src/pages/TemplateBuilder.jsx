@@ -231,7 +231,7 @@ const TemplateBuilder = () => {
                 )}
             </Modal>
 
-            <Modal isOpen={isSectionEditorOpen} onClose={() => setIsSectionEditorOpen(false)} title={isEditSection ? "Edit Section" : "Add New Section"}>
+            <Modal isOpen={isSectionEditorOpen} onClose={() => {setIsSectionEditorOpen(false); setIsEditSection(false)}} title={isEditSection ? "Edit Section" : "Add New Section"}>
                 <SectionEditor
                     onSubmit={isEditSection ? handleEditSection : handleAddSection}
                     onCancel={() => setIsSectionEditorOpen(false)}
