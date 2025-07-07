@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 .col-count {
-    grid-template-columns: 1;
+    grid-template-columns: auto;
 }
 
 @media screen and (min-width: 640px) {
     .col-count {
-        grid-template-columns: repeat(var(--data-col-sm-count), auto);
+        grid-template-columns: repeat(var(--data-col-sm-count), 1fr);
     }
 }
 @media screen and (min-width: 768px) {
     .col-count {
-        grid-template-columns: repeat(var(--data-col-md-count), auto);
+        grid-template-columns: repeat(var(--data-col-md-count), 1fr);
     }
 }
 @media screen and (min-width: 1024px) {
     .col-count {
-        grid-template-columns: repeat(var(--data-col-lg-count), auto);
+        grid-template-columns: repeat(var(--data-col-lg-count), 1fr);
     }
 }
 
