@@ -19,3 +19,9 @@
         grid-template-columns: repeat(var(--data-col-lg-count), auto);
     }
 }
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 3px 4px #3b82f680 !important;
+    border: none !important;
+    outline: none;
+}

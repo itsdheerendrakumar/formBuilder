@@ -36,10 +36,10 @@ const TemplatesPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 p-8 font-inter">
+        <div className="min-h-screen p-8 font-inter">
             <button
                 onClick={() => navigate(`/create-template`)}
-                className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-md"
+                className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-md cursor-pointer"
             >
                 Create New Template
             </button>
@@ -66,7 +66,7 @@ const TemplatesPage = () => {
                     {templates.map((template) => (
                         <div 
                             key={template.id} 
-                            className='p-10 text-3xl shadow-md rounded-md cursor-pointer'
+                            className='p-10 bg-white text-3xl shadow-md rounded-md cursor-pointer'
                             onClick={() => navigate(`/saved-forms/${template.id}`)}
                         >
                             <h1>{template.name}</h1>

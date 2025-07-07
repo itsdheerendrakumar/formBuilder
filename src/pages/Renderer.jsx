@@ -94,7 +94,7 @@ const FormRenderer = ({ template, mode, initialData = {}, onSubmit, isPreview=fa
                                             value={formData[field.id] || ''}
                                             onChange={handleChange}
                                             placeholder={field.placeholder}
-                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2`}
+                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm  p-2`}
                                             readOnly={mode === 'view'}
                                         />
                                     )}
@@ -106,7 +106,7 @@ const FormRenderer = ({ template, mode, initialData = {}, onSubmit, isPreview=fa
                                             onChange={handleChange}
                                             placeholder={field.placeholder}
                                             rows="4"
-                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2`}
+                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm  p-2`}
                                             readOnly={mode === 'view'}
                                         ></textarea>
                                     )}
@@ -116,7 +116,7 @@ const FormRenderer = ({ template, mode, initialData = {}, onSubmit, isPreview=fa
                                             name={field.id}
                                             value={formData[field.id] || ''}
                                             onChange={handleChange}
-                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 bg-white`}
+                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm  p-2 bg-white`}
                                             disabled={mode === 'view'}
                                         >
                                             <option value="">Select an option</option>
@@ -157,7 +157,7 @@ const FormRenderer = ({ template, mode, initialData = {}, onSubmit, isPreview=fa
                                                         value={option}
                                                         checked={formData[field.id] === option}
                                                         onChange={handleChange}
-                                                        className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500 mr-2"
+                                                        className="h-4 w-4 text-blue-600 border-gray-300  mr-2"
                                                         disabled={mode === 'view'}
                                                     />
                                                     <label htmlFor={`${option}-${index}`} className="flex items-center text-gray-700">              
@@ -173,7 +173,7 @@ const FormRenderer = ({ template, mode, initialData = {}, onSubmit, isPreview=fa
                                             name={field.id}
                                             value={formData[field.id] || ''}
                                             onChange={handleChange}
-                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 bg-white`}
+                                            className={`mt-1 block w-full rounded-md border ${errors[field.id] ? 'border-red-500' : 'border-gray-300'} shadow-sm  p-2 bg-white`}
                                             disabled={mode === 'view'}
                                         >
                                             <option value="">Select an option</option>

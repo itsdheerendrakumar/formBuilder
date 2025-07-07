@@ -248,7 +248,6 @@ const TemplateBuilder = () => {
                         createdAt: new Date().toISOString(),
                     }}
                     mode="create"
-                    onSubmit={handlePreview}
                     isPreview={isPreview}
                 />
             </Modal>

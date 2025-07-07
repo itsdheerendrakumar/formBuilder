@@ -11,26 +11,28 @@ import EditFormPage from './pages/EditFormPage';
 
 const App = () => {
     return (
-        <Router>
-            {/* Tailwind CSS import for Inter font */}
-            <style>
-                {`
-                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-                body {
-                    font-family: 'Inter', sans-serif;
-                }
-                `}
-            </style>
-            <Routes>
-                {/* <Route path="/" element={<HomePage />} /> */}
-                <Route path="/" element={<TemplatesPage />} />
-                <Route path="/create-template" element={<TemplateBuilder />} />
-                <Route path="/fill-form/:templateId" element={<FormFillPage />} />
-                <Route path="/saved-forms/:templateId" element={<SavedFormsPage />} />
-                <Route path="/view-form/:formId" element={<ViewFormPage />} />
-                <Route path="/edit-form/:formId" element={<EditFormPage />} />
-            </Routes>
-        </Router>
+        <div className='bg-[#e5e7eb]'>
+            <Router>
+                {/* Tailwind CSS import for Inter font */}
+                <style>
+                    {`
+                    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+                    body {
+                        font-family: 'Inter', sans-serif;
+                    }
+                    `}
+                </style>
+                <Routes>
+                    {/* <Route path="/" element={<HomePage />} /> */}
+                    <Route path="/" element={<TemplatesPage />} />
+                    <Route path="/create-template" element={<TemplateBuilder />} />
+                    <Route path="/fill-form/:templateId" element={<FormFillPage />} />
+                    <Route path="/saved-forms/:templateId" element={<SavedFormsPage />} />
+                    <Route path="/view-form/:formId" element={<ViewFormPage />} />
+                    <Route path="/edit-form/:formId" element={<EditFormPage />} />
+                </Routes>
+            </Router>
+        </div>
     );
 };
 
