@@ -11,7 +11,7 @@ const SectionEditor = ({ onSubmit, onCancel, isEditSection = false, editSectionD
     };
 
     return (
-        <div className="space-y-4">
+        <div className="p-4 flex flex-col gap-4">
             <div>
                 <label className="block text-sm font-medium">Section Name</label>
                 <input
@@ -21,7 +21,7 @@ const SectionEditor = ({ onSubmit, onCancel, isEditSection = false, editSectionD
                     className="w-full mt-1 p-2 border rounded"
                 />
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 gap-4">
                 {[{value: 'sm', name: "For Mobile"}, {value: 'md', name: "For tabs"}, {value: 'lg', name: "For large screen"}].map((size) => (
                     <div key={size.value}>
                         <label className="block text-sm font-medium">Columns ({size.name})</label>

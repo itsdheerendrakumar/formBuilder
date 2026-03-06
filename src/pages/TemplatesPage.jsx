@@ -66,7 +66,7 @@ const TemplatesPage = () => {
                     {templates.map((template) => (
                         <div 
                             key={template.id} 
-                            className='p-10 bg-white text-3xl shadow-md rounded-md cursor-pointer'
+                            className='px-5 py-10 text-center bg-white text-lg shadow-md rounded-md cursor-pointer'
                             onClick={() => navigate(`/saved-forms/${template.id}`)}
                         >
                             <h1>{template.name}</h1>
