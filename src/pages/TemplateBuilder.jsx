@@ -157,8 +157,8 @@ const TemplateBuilder = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-screen bg-gray-50 p-6 font-inter">
-            <h1 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">Form Template Builder</h1>
+        <div className="flex flex-col min-h-screen p-6">
+            <h1 className="font-bold mb-8 text-center">Form Template</h1>
 
             {message && (
                 <div className={`p-3 mb-4 rounded-md text-center text-sm ${messageType === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
@@ -174,19 +174,19 @@ const TemplateBuilder = () => {
                 <div className="flex-grow flex flex-col bg-white rounded-lg shadow-xl p-6 relative">
                     <div className="mb-6 flex">
                         <div className="flex-grow">
-                            <label htmlFor="templateName" className="block text-lg font-medium text-gray-700 mb-2">Template Name</label>
+                            <label htmlFor="templateName" className="block font-medium mb-4">Template Name</label>
                             <input
                                 type="text"
                                 id="templateName"
                                 value={templateName}
                                 onChange={(e) => setTemplateName(e.target.value)}
-                                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 border text-lg"
+                                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 border"
                                 placeholder="Enter template name"
                             />
                         </div>
                         <button
                             onClick={() => setIsSectionEditorOpen(true)}
-                            className="ml-4 px-4 py-2 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 absolute right-6 top-3"
+                            className="ml-4 px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 absolute right-6 top-3"
                         >
                             + Add Section
                         </button>
