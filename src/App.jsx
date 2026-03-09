@@ -11,7 +11,7 @@ import EditFormPage from './pages/EditFormPage';
 
 const App = () => {
     return (
-        <div className='bg-blue-50'>
+        <div className='bg-[#f0eeee]'>
             <Router>
                 {/* Tailwind CSS import for Inter font */}
                 <style>

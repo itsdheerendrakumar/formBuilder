@@ -13,7 +13,7 @@ const Sidebar = ({ onAddField }) => {
 
     return (
         <div className="w-64 bg-gray-50 p-6 border-r border-gray-200 shadow-lg rounded-lg sticky top-0 left-0">
-            <h2 className="text-xl font-bold mb-6 text-gray-800">Field Types</h2>
+            <h2 className="font-semibold mb-6">Field Types</h2>
             <div className="space-y-4">
                 {fieldTypes.map((type) => (
                     <div
@@ -22,7 +22,7 @@ const Sidebar = ({ onAddField }) => {
                         onDragStart={(e) => {
                             e.dataTransfer.setData('field-type', type.id);
                         }}
-                        className="p-4 bg-white rounded-md shadow-sm border border-gray-200 hover:border-blue-400 cursor-grab transition duration-200 ease-in-out text-center text-gray-700 font-medium"
+                        className="p-4 bg-white rounded-md shadow-sm border border-gray-200 hover:border-blue-400 cursor-grab transition duration-200 ease-in-out text-center font-medium"
                     >
                         {type.label}
                     </div>

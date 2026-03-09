@@ -6,7 +6,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 
     return (
         <div className="fixed top-0 right-0 bottom-0 left-0 bg-black/50 flex items-center justify-center z-50 p-4 h-screen">
-            <div className={`bg-white rounded-lg shadow-xl w-full ${title !== "Preview" && "max-w-md"} p-6 relative flex flex-col  max-h-[90vh]`}>
+            <div className={`bg-white rounded-lg shadow-xl w-full ${title !== "Preview" && "max-w-md"} p-4 relative flex flex-col  max-h-[90vh]`}>
                 <h3 className="text-xl font-semibold mb-4">{title}</h3>
                 <button
                     onClick={onClose}

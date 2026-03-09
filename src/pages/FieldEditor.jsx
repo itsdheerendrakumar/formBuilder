@@ -29,9 +29,9 @@ const FieldEditor = ({ field, onUpdateField, onClose }) => {
     };
 
     return (
-        <div className="space-y-4">
+        <div className="space-y-4 px-2">
             <div>
-                <label htmlFor="fieldLabel" className="block text-sm font-medium text-gray-700">Label</label>
+                <label htmlFor="fieldLabel" className="block text-sm font-medium">Label Name</label>
                 <input
                     type="text"
                     id="fieldLabel"
@@ -42,7 +42,7 @@ const FieldEditor = ({ field, onUpdateField, onClose }) => {
             </div>
             {(field.type === 'input' || field.type === 'textarea') && (
                 <div>
-                    <label htmlFor="fieldPlaceholder" className="block text-sm font-medium text-gray-700">Placeholder</label>
+                    <label htmlFor="fieldPlaceholder" className="block text-sm font-medium">Placeholder</label>
                     <input
                         type="text"
                         id="fieldPlaceholder"
@@ -53,7 +53,7 @@ const FieldEditor = ({ field, onUpdateField, onClose }) => {
                 </div>
             )}
             <div>
-                <label htmlFor="fieldRequired" className="flex items-center text-sm font-medium text-gray-700">
+                <label htmlFor="fieldRequired" className="flex items-center text-sm font-medium">
                     <input
                         type="checkbox"
                         id="fieldRequired"
@@ -66,7 +66,7 @@ const FieldEditor = ({ field, onUpdateField, onClose }) => {
             </div>
             {(field.type === 'select' || field.type === 'radio' || field.type === 'checkbox') && (
                 <div>
-                    <label htmlFor="fieldOptions" className="block text-sm font-medium text-gray-700">Options (one per line)</label>
+                    <label htmlFor="fieldOptions" className="block text-sm font-medium">Options (one per line)</label>
                     <textarea
                         id="fieldOptions"
                         value={options}
