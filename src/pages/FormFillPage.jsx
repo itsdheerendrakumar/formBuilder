@@ -109,7 +109,7 @@ const FormFillPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 p-6 font-inter">
+        <div className="p-6">
             {message && (
                 <div className={`p-3 mb-4 rounded-md text-center text-sm ${messageType === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
                     {message}
