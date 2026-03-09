@@ -67,23 +67,23 @@ const FormRenderer = ({ template, mode, initialData = {}, onSubmit, isPreview=fa
     }
 
     return (
-        <div className="mx-auto bg-white p-8 rounded-lg shadow-xl my-8 font-inter">
+        <div className="mx-auto rounded-lg my-8">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
                 {mode === 'create' ? 'Fill Form' : mode === 'edit' ? 'Edit Form' : 'View Form'}
             </h2>
-            <p className="text-xl font-semibold text-gray-700 mb-8 text-center">{template.name}</p>
+            <p className="text-xl font-semibold mb-8 text-center">{template.name}</p>
 
             <form onSubmit={handleSubmit} className="space-y-10">
                 {template.sections.map((section) => {
                     return (
-                    <div key={section.id} className="mb-8">
-                        {section.name.length > 0 ? <h3 className="text-xl font-bold text-gray-800 mb-4">{section.name}</h3> : null}
+                    <div key={section.id} className="mb-8 bg-white px-4 py-6 rounded-lg">
+                        {section.name.length > 0 ? <h3 className="font-bold mb-4">{section.name}</h3> : null}
                         <div className={`grid gap-6 col-count`}
                             style={{"--data-col-sm-count": section.columns.sm, "--data-col-md-count": section.columns.md, "--data-col-lg-count": section.columns.lg}}
                         >
                             {section.fields.map((field) => (
                                 <div key={field.id}>
-                                    <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-1">
+                                    <label htmlFor={field.id} className="block text-sm font-medium mb-1">
                                         {field.label} {field.required && <span className="text-red-500">*</span>}
                                     </label>
                                     {field.type === 'input' && (
